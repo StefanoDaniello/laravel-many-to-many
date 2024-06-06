@@ -34,7 +34,8 @@
       <div class="collapse" id="page-layouts"  >
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link"><i class="fa-solid fa-tags fa-lg fa-fw"></i>
+            <a class="nav-link {{Route::currentRouteName() == 'admin.tags.index' ? 'active' : ''}}"
+            href="{{route('admin.tags.index')}}"><i class="fa-solid fa-tags fa-lg fa-fw"></i>
               <span> Tags</span></a>
           </li>
           <li class="nav-item">

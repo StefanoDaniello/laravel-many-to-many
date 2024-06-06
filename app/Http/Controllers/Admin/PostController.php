@@ -117,6 +117,13 @@ class PostController extends Controller
         }
         // DB::enableQueryLog();
         $post->update($form_data);
+
+        if($request->has('tags')){
+            //con attach passiamo l' array dei tag 
+            $post->tags()->sync($request->tags);
+        }else{
+            $post->tags()->sync([]);
+        }
         // $query = DB::getQueryLog();
         // dd($query);
         return redirect()->route('admin.posts.show', $post->slug);

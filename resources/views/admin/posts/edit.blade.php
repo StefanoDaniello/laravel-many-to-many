@@ -68,8 +68,27 @@
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
-            <div class="mb-3">
-                <button type="submit" class="btn btn-primary">Modifica</button>
+            <div class="form-group">
+                <p>Tag:</p>
+                @foreach ($tags as $tag)
+                    <div>
+                        <input class="form-check-input" type="checkbox" value="{{$tag->id}}"  name="tags[]"
+                        {{-- per far si che i tag selezionati vengano salvati utilizzo 
+                            un array dove veranno inseriti i valori di essi,
+                            e tramite old verranno recuperati quando c'e un errore--}}
+                        {{$post->tags->contains($tag->id) ? 'checked' : ''}}>
+                        <label class="form-check-label" for="">
+                            {{$tag->name}}
+                        </label>
+                    </div>
+                @endforeach
+                @error('tags')
+                <div class="alert alert-danger">{{$message}}</div>
+                @enderror
+            </div>
+
+            <div class="my-3">
+                <button type="submit" class="btn btn-primary text-white">Modifica</button>
                 <button type="reset" class="btn btn-danger mx-4">
                     <a href="{{route('admin.posts.index')}}" class="text-white">Annulla</a>
                 </button>

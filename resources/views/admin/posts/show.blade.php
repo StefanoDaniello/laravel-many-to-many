@@ -11,7 +11,7 @@
 
     
     <div class="card my-3 overflow-hidden" style="width: 500px">
-        <img src="{{asset('storage/'.$post->image)}}" alt="{{$post->title}}"> <br>
+        <img src="{{asset('storage/'. $post->image)}}" alt="{{$post->title}}"> <br>
         <div class="card-body">
             <h1>{{$post->title}}</h1>
             <p>{{$post->content}}</p>
@@ -20,7 +20,6 @@
             @endif
             @if($post->tags)
                 {{-- $post->tags esso e un array di tags--}}
-                <span>Tags:</span>
                 @foreach ($post->tags as $tag)
                     <span class="badge bg-primary">{{$tag->name}}</span>
                 @endforeach
