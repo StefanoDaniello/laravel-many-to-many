@@ -36,7 +36,8 @@
                     <form action="{{route('admin.tags.destroy', $tag->slug)}}" method="POST" class="d-inline-block">
                       @csrf
                       @method('DELETE')
-                      <button type="submit" class="delete-button border-0 bg-transparent" title="Elimina"  data-item-title="{{ $tag->name }}">
+                      <button type="submit" class="delete-button border-0 bg-transparent" title="Elimina" 
+                       data-item-title="{{ $tag->name }}">
                         <i class="fa-solid fa-trash"></i>
                       </button>
                     </form>
