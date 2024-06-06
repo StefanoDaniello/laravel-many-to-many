@@ -29,7 +29,7 @@ class UpdatePostRequest extends FormRequest
                 'min:3',
                 Rule::unique('posts')->ignore($this->post->id),
             ],
-            'image' => 'nullable|image|max:1024',
+            'image' => 'nullable|max:1024',
             'content' => 'nullable|max:255',
             'user_id' => 'nullable|exists:users,id',
             'category_id' => 'nullable|exists:categories,id',

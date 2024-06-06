@@ -23,7 +23,7 @@ class StorePostRequest extends FormRequest
     {
         return [
             'title' => 'required|unique:posts|max:200|min:3',
-            'image' => 'nullable|image|max:1024',
+            'image' => 'nullable|max:1024',
             'content' => 'nullable|max:255',
             'user_id' => 'nullable|exists:users,id',
             'category_id' => 'nullable|exists:categories,id',

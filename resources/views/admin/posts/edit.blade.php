@@ -8,7 +8,7 @@
             <a href="{{ route('admin.posts.index') }}" class="btn btn-primary "><i><i class="fa-solid fa-arrow-left"></i></a>
             <h1 class="mx-3">Edit</h1>
         </div>
-        <form action="{{ route('admin.posts.update', $post->slug) }}" method="POST">
+        <form action="{{ route('admin.posts.update', $post->slug) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="mb-3">
