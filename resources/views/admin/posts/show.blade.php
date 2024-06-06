@@ -16,11 +16,20 @@
             <h1>{{$post->title}}</h1>
             <p>{{$post->content}}</p>
             @if($post->category)
-            <p> Catrgory: {{$post->category->name}}</p>
+                <p> Catrgory: {{$post->category->name}}</p>
             @endif
-            <button class="btn btn-primary">
-                <a href="{{route('admin.posts.edit', $post->slug)}}" class="text-white">Modifica</a>
-            </button>
+            @if($post->tags)
+                {{-- $post->tags esso e un array di tags--}}
+                <span>Tags:</span>
+                @foreach ($post->tags as $tag)
+                    <span class="badge bg-primary">{{$tag->name}}</span>
+                @endforeach
+            @endif
+            <div class="my-3">
+                <button class="btn btn-primary">
+                    <a href="{{route('admin.posts.edit', $post->slug)}}" class="text-white">Modifica</a>
+                </button>
+            </div>
         </div>
     </div>
     

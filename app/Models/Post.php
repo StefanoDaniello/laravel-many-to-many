@@ -19,6 +19,8 @@ class Post extends Model
         'slug',
         'user_id',
         'category_id'
+        // 'tags' non va aggiunto perche la tabella non ha un id
+        // va aggiunto nelle validazioni
     ];
     public static function generateSlug($title)
     {
