@@ -16,7 +16,7 @@
             <div class="mb-3">
                 <label for="name" class="form-label">Tag Name</label>
                 <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name"
-                    value="{{ old('name', $tag->name) }}" minlength="3" maxlength="200" required>
+                    value="{{ old('name', $tag->name) }}">
                 @error('name')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror

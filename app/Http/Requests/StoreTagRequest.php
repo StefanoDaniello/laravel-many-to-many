@@ -30,8 +30,8 @@ class StoreTagRequest extends FormRequest
 
         return [
             'name.unique:tags' => 'Questo tag esiste gia!',
-            'name.max' => 'Il tag deve essere lungo massimo :max caratteri!',
-            'name.min' => 'Il tag deve essere lungo almeno :min caratteri!'
+            'name.max' => 'Il tag deve essere lungo massimo :50 caratteri!',
+            'name.min' => 'Il tag deve essere lungo almeno :3 caratteri!'
         ];
     }
 }

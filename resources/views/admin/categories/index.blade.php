@@ -4,7 +4,7 @@
 @section('content')
 <section>
     @if(session()->has('message'))
-    <div class="alert alert-success">{{session()->get('message')}}</div>
+    <div class="alert alert-success mt-3">{{session()->get('message')}}</div>
     @endif
     <div class="d-flex justify-content-between align-items-center py-4">
         <h1>Categories</h1>
