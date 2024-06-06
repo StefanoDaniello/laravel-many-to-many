@@ -10,22 +10,22 @@ class Tag extends Model
 {
     use HasFactory;
 
-    // protected $fillable = [
-    //     'name',
-    //     'slug'
-    // ];
-    // public static function generateSlug($name)
-    // {
-    //     $slug = Str::slug($name, '-');
-    //     $count = 1;
-    //     while (Tag::where('slug', $slug)->first()) {
-    //         $slug = Str::of($name)->slug('-') . "-{$count}";
-    //         $count++;
-    //     }
-    //     return $slug;
-    // }
-    // public function posts(){
-    //     return $this->belongsToMany(Post::class);
-    // }
+    protected $fillable = [
+        'name',
+        'slug'
+    ];
+    public static function generateSlug($name)
+    {
+        $slug = Str::slug($name, '-');
+        $count = 1;
+        while (Tag::where('slug', $slug)->first()) {
+            $slug = Str::of($name)->slug('-') . "-{$count}";
+            $count++;
+        }
+        return $slug;
+    }
+    public function posts(){
+        return $this->belongsToMany(Post::class);
+    }
 
 }
