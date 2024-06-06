@@ -26,7 +26,8 @@ class StorePostRequest extends FormRequest
             'image' => 'nullable|image|max:1024',
             'content' => 'nullable|max:255',
             'user_id' => 'nullable|exists:users,id',
-            'category_id' => 'nullable|exists:categories,id'
+            'category_id' => 'nullable|exists:categories,id',
+            'tags' => 'nullable|exists:tags,id'
         ];
     }
 
@@ -41,6 +42,7 @@ class StorePostRequest extends FormRequest
             'content.max' => 'Il contenuto deve essere lungo massimo :max caratteri!',
             'user_id.exists' => 'L\'utente selezionato non esiste',
             'category_id.exists' => 'La categoria selezionata non esiste',
+            'tags.exists' => 'Il tag selezionato non esiste'
             
         ];
     }

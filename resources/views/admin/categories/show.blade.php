@@ -10,7 +10,7 @@
       </div>
         
         <div>
-            <a href="{{route('admin.categories.edit',$category->slug)}}" class="btn btn-secondary">Edit</a>
+            <a href="{{route('admin.categories.edit',$category->slug)}}" class="btn btn-primary text-white">Edit</a>
             <form action="{{route('admin.categories.destroy', $category->slug)}}" method="POST" class="d-inline-block">
                 @csrf
                 @method('DELETE')

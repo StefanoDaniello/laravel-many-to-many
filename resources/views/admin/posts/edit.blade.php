@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Create Post')
+@section('title', 'Edit Post' . $post->title)
 
 @section('content')
     <section class="container m-auto">
@@ -8,7 +8,7 @@
             <a href="{{ route('admin.posts.index') }}" class="btn btn-primary "><i><i class="fa-solid fa-arrow-left"></i></a>
             <h1 class="mx-3">Edit</h1>
         </div>
-        <form action="{{ route('admin.posts.update', $post) }}" method="POST">
+        <form action="{{ route('admin.posts.update', $post->slug) }}" method="POST">
             @csrf
             @method('PUT')
             <div class="mb-3">
