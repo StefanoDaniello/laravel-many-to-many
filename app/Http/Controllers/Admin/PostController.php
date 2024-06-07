@@ -51,7 +51,7 @@ class PostController extends Controller
         if ($request->hasFile('image')) {
             //dd($request->image);
             $name = $request->image->getClientOriginalName(); 
-            //o il nome che volete dare al file
+            //Nome che si vole dare al file
             // $path = $request->file('image')->storeAs(
             //     'post_images',
             //      $name
