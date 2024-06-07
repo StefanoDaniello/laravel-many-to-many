@@ -33,6 +33,26 @@ a{
     width: 200px;
     
 }
+.small-sidebar{
+    width: 70px !important;
+
+    span{
+        display: none;
+    }
+    #big-logo{
+        display: flex;
+        justify-content: center;
+        margin-right: 10px;
+    }
+}
+.big-wrapper{
+    width: calc(100% - 70px) !important;
+    header{
+        width: calc(100% - 70px) !important;
+    }
+}
+
+
 #admin{
     height: 100vh;
     overflow: hidden;

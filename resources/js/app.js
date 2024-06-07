@@ -56,8 +56,16 @@ if (image) {
     });
 }
 
-// const sidebar_toggle = document.getElementById("sidebar-toggle");
-// const sidebar = document.getElementById("sidebar");
-// sidebar_toggle.addEventListener("click", () => {
-//     sidebar.
-// })
+const sidebar_toggle = document.getElementById("sidebar-toggle");
+const wrapper = document.getElementById("wrapper");
+const sidebar = document.getElementById("sidebar");
+sidebar_toggle.addEventListener("click", () => {
+    if (sidebar.classList.contains("small-sidebar")) {
+        sidebar.classList.remove("small-sidebar");
+        wrapper.classList.remove("big-wrapper");
+
+    } else {
+        sidebar.classList.add("small-sidebar");
+        wrapper.classList.add("big-wrapper");
+    }
+})
