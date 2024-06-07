@@ -119,9 +119,10 @@ class PostController extends Controller
         $post->update($form_data);
 
         if($request->has('tags')){
-            //con attach passiamo l' array dei tag 
+            //con sync passiamo l' array dei tag che veranno aggiunti alla tabella pivot 
             $post->tags()->sync($request->tags);
         }else{
+            //altrimenti passiamo un array vuoto
             $post->tags()->sync([]);
         }
         // $query = DB::getQueryLog();

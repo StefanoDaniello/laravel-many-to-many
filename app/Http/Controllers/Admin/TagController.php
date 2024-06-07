@@ -64,7 +64,7 @@ class TagController extends Controller
             $form_data['slug'] = Tag::generateSlug($form_data['name']);
         }
         $tag->update($form_data);
-        return redirect()->route('admin.categories.show', $tag->slug);
+        return redirect()->route('admin.tags.show', $tag->slug);
     }
 
     /**

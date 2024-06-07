@@ -22,16 +22,24 @@ class StoreTagRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'unique:tags|max:50|min:3'
+            'name' => 'required|unique:tags|max:200|min:3|string',
+            'slug' => 'nullable|unique:tags|max:200|min:3|string',
         ];
     }
 
     public function messages(){
 
         return [
-            'name.unique:tags' => 'Questo tag esiste gia!',
-            'name.max' => 'Il tag deve essere lungo massimo :50 caratteri!',
-            'name.min' => 'Il tag deve essere lungo almeno :3 caratteri!'
+            'name.required' => 'Il nome è obbligatorio!',
+            'name.unique:tags' => 'Questo nome esiste più!',
+            'name.max' => 'Il nome deve essere lungo massimo :max caratteri!',
+            'name.min' => 'Il nome deve essere lungo almeno :min caratteri!',
+            'name.string' => 'Il nome deve essere una stringa',
+            'slug.unique:tags' => 'Questo slug esiste più!',
+            'slug.max' => 'Il slug deve essere lungo massimo :max caratteri!',
+            'slug.min' => 'Il slug deve essere lungo almeno :min caratteri!',
+            'slug.string' => 'Il slug deve essere una stringa',
+            
         ];
     }
 }
