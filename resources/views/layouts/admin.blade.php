@@ -20,9 +20,12 @@
 </head>
 
 <body>
-    <div id="admin">
+    <div id="admin" >
         @include('partials.sidebar')
-        <div id="wrapper">
+        <div id="wrapper" >
+            <div class="bg"></div>
+            <div class="bg bg2"></div>
+            <div class="bg bg3"></div>
            @include('partials.header')
             <main class="container-fluid">
                 @yield('content')
