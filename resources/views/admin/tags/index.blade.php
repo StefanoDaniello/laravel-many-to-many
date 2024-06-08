@@ -8,7 +8,7 @@
     @endif
     <div class="d-flex justify-content-between align-items-center py-4">
         <h1>tags</h1>
-        <a href="{{route('admin.tags.create')}}" class="btn btn-primary text-white">Crea nuovo tag</a>
+        <a href="{{route('admin.tags.create')}}" class="button-create btn fw-bold text-white"><i class="fa-solid fa-plus"></i> ADD</a>
     </div>
 
     <table class="table table-striped">
