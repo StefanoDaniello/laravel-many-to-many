@@ -18,8 +18,8 @@ return [
     'paths' => ['api/*', 'sanctum/csrf-cookie'],
 
     'allowed_methods' => ['*'],
-
-    'allowed_origins' => ['*'],
+    // se non trova APP_FRONTEND_URL usa il valore di default
+    'allowed_origins' => [env('APP_FRONTEND_URL', 'http://default.it')],
 
     'allowed_origins_patterns' => [],
 

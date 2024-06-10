@@ -11,7 +11,7 @@
         <a href="{{route('admin.posts.create')}}" class="button-create btn fw-bold text-white"><i class="fa-solid fa-plus"></i> ADD</a>
     </div>
 
-    <table class="table table-striped">
+    <table class="tb-glass" >
         <thead>
             <tr>
               <th scope="col" class="d-none d-lg-table-cell">Id</th>
@@ -25,7 +25,7 @@
           <tbody>
             @foreach ($posts as $post)
             <tr>
-                <td class="d-none d-lg-table-cell">{{$post->id}}</td>
+                <td class="d-none d-lg-table-cell ">{{$post->id}}</td>
                 <td>{{$post->title}}</td>
                 <td class="d-none d-xl-table-cell">{{$post->slug}}</td>
                 <td>{{$post->created_at}}</td>

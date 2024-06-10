@@ -11,7 +11,7 @@
         <a href="{{route('admin.tags.create')}}" class="button-create btn fw-bold text-white"><i class="fa-solid fa-plus"></i> ADD</a>
     </div>
 
-    <table class="table table-striped">
+    <table class="tb-glass">
         <thead>
             <tr>
               <th scope="col" class="d-none d-lg-table-cell">Id</th>

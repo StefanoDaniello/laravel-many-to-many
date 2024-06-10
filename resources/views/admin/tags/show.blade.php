@@ -54,7 +54,7 @@
 
 
 
-    <table class="table table-striped">
+    <table class="tb-glass">
         <thead>
             <tr>
               <th scope="col">Id</th>
